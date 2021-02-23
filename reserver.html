@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+
+
+    }
+
+    body {
+      background-color: #f1f0ff;
+    }
+
+
+    header {
+
+      padding: .9rem;
+      background: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      text-decoration: none;
+    }
+
+    .logo img {
+      float: left;
+      height: 20%;
+      width: 40%;
+      padding: 0%;
+      margin-left: 20%;
+    }
+
+    nav {
+      margin-right: 10%;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      display: block;
+      margin: .6rem 0;
+      padding: .6rem 1.25rem;
+      text-decoration: none;
+      color: #22206B;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: #FFCE07;
+      color: #fff;
+      transition: .5s;
+    }
+
+    @media (max-width:810px) {
+
+
+
+      header {
+        position: relative;
+      }
+
+      .menu-toggle {
+        position: absolute;
+        right: 5%;
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: .6rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #FFCE07;
+        z-index: 1000;
+      }
+
+      .menu-toggle::before {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 2.6rem;
+        font-size: 1.6rem;
+      }
+
+      .menu-toggle.active::before {
+        content: '\f00d';
+        font-size: 1.6rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav.active ul {
+        display: block;
+        position: absolute;
+        top: 36px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      nav ul li a {
+        margin: 0;
+      }
+
+
+    }
+
+
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+
+
+    .container {
+
+
+      margin: 0 auto;
+      color: #777;
+      position: relative;
+      top: 38%;
+      left: 43%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 85%;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+    #contact {
+      background: #F9F9F9;
+      padding: 25px;
+      margin: 50px 0;
+    }
+
+    #contact h3 {
+      color: #FFCE07;
+      display: block;
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    fieldset {
+      border: medium none !important;
+      margin: 15px 0 10px;
+      min-width: 100%;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #contact label {
+      width: 15%;
+      text-align: right;
+      margin-left: 2%;
+      margin-top: 1%;
+
+    }
+
+
+    #contact select,
+    input[type="number"] {
+      width: 80%;
+      border: 1px solid #CCC;
+      background: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+      float: right;
+      margin-left: 3%;
+    }
+
+
+
+
+    #contact button[type="button"] {
+      width: 100%;
+      margin-left: 20%;
+      border: none;
+      background: #22206B;
+      color: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+      font-size: 15px;
+
+    }
+
+    #contact button[type="button"]:hover {
+      background: #8684ff;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+
+
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: 0;
+      border: 1px solid #999;
+    }
+
+
+
+
+
+
+
+    footer {
+
+      bottom: 0;
+      width: 100%;
+      background-color: #22206B;
+      color: #fff;
+      display: flex;
+      flex-flow: row wrap;
+      padding: 20px;
+      padding-top: 40px;
+      margin: 0;
+    }
+
+    .footer>* {
+      flex: 1 100%;
+    }
+
+    .left-box {
+      margin-left: 2.25em;
+      margin-bottom: 2em;
+    }
+
+    .left-box img {
+      width: 50%;
+
+    }
+
+    footer h2 {
+      font-weight: 600;
+      font-size: 17px;
+
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0%;
+    }
+
+    .footer li {
+      line-height: 2em;
+
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .right-box {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .right-box>* {
+      flex: 1 50%;
+      margin-right: 1.25em;
+    }
+
+    .box a {
+      color: #999;
+    }
+
+    .bottom-box {
+      text-align: center;
+      color: #999;
+      padding-top: 30px;
+
+    }
+
+    .left-box p {
+      padding-right: 15%;
+      color: #999;
+      margin: 50px;
+      margin-left: 0%;
+
+    }
+
+    .socials a {
+
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .socials a i {
+      color: #e7f2f4;
+      padding: 10% 12%;
+      font-size: 40px;
+    }
+
+    .socials a i:hover {
+      color: #999;
+    }
+
+    @media screen and (min-width: 600px) {
+      .right-box>* {
+        flex: 1;
+
+      }
+
+      .left-box {
+        flex: 1 0px;
+
+      }
+
+      .right-box {
+        flex: 2 0px;
+      }
+
+      .footer {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <a href="#" class="logo"><img src="logo.png" alt=""></a>
+    <div class="menu-toggle"></div>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reserver.html" class="active">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+  <div class="container">
+    <form id="contact" action="" method="post">
+      <h3>Reserve Now</h3>
+
+      <fieldset>
+
+        <label for="carburant">Vehicle type :</label>
+        <select name="bv" id="tv">
+          <option value="" selected="selected">Select a vehicle type </option>
+        </select>
+
+      </fieldset>
+      <fieldset>
+        <label for="carburant">Fuel :</label>
+        <select name="bv" id="Carburant">
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="carburant">Gear box :</label>
+        <select name="bv" id="bv">
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="carburant">Number of days :</label>
+        <input type="number" min="1" id="nbrjour">
+      </fieldset>
+      <fieldset>
+
+        <button name="submit" type="button" id="contact-submit" onclick="Calcule()">Submit</button>
+      </fieldset>
+
+
+      <p id="Erreur" style="color:rgb(255, 0, 0)"></p>
+      <p id="res" style="color:rgb(39, 230, 188)"></p>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+  <footer class="footer" style="background-color: #22206B;">
+
+    <div class="left-box">
+      <img src="logo22.png" alt="">
+      <p>Working with leading suppliers, we offer great prices on all car groups including
+        luxury cars</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <ul class="right-box">
+      <li>
+        <h2>Product</h2>
+        <ul class="box">
+          <li><a href="#">Motorcycle</a></li>
+          <li><a href="#">Citadine</a></li>
+          <li><a href="#">Compact</a></li>
+          <li><a href="#">Berline</a></li>
+          <li><a href="#">Utilitaire</a></li>
+          <li><a href="#">Engin de Chantier</a></li>
+          <li><a href="#">Camion</a></li>
+        </ul>
+      </li>
+      <li class="features">
+        <h2>Quick links</h2>
+        <ul class="box">
+          <li><a href="#"><i class="fas fa-user-friends"></i> Team</a></li>
+          <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+          <li><a href="#"><i class="fas fa-address-card"></i> About us</a></li>
+          <li><a href="#"><i class="fas fa-handshake"></i> Partners</a></li>
+        </ul>
+      </li>
+      <li>
+        <h2>Contact us</h2>
+        <ul class="box">
+          <li><a href="#"><i class="fas fa-envelope-open-text"></i> contact@hts-rentcar.com</a></li>
+          <li><a href="#"><i class="fas fa-phone"></i> +212(0) 661 983 748</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> 160 City Road, Kemp House, London, United Kingdom, EC1V
+              2NX
+
+              303 Mhamid 4, 40000 Marrakech, Maroc</a></li>
+          <li><a href="#">kjhih</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="bottom-box">
+      <p>Copyright 2021 All Right Reserved By Imane Rkhis</p>
+    </div>
+
+
+
+
+  </footer>
+
+
+
+
+
+  <script>
+    var subjectObject = {
+      "Motos": {
+        "Electrique": ["manuelle"],
+        "Essence": ["manuelle"]
+      },
+      "Citadine": {
+        "Electrique": ["Manuelle"],
+        "hybride": ["Manuelle"],
+        "Essence": ["Manuelle"],
+        "Diesel": ["Manuelle"]
+      },
+      "Compact": {
+        "hybride": ["Manuelle"],
+        "Essence": ["Manuelle"],
+        "Diesel": ["Manuelle"]
+      },
+      "Berline": {
+        "hybride": ["Automatique"],
+        "Essence": ["Automatique"],
+        "Diesel": ["Automatique"]
+      },
+      "Utilitaire": {
+        "Diesel": ["Manuelle"]
+      },
+      "Engin de Chantier": {
+        "Essence": ["Manuelle"],
+        "Diesel": ["Manuelle"]
+      },
+      "Camion": {
+        "Diesel": ["Automatique"]
+
+      }
+    }
+    window.onload = function () {
+      var type_du_véhicule = document.getElementById("tv");
+      var carburant = document.getElementById("Carburant");
+      var boite_à_vitessel = document.getElementById("bv");
+      for (var x in subjectObject) {
+        type_du_véhicule.options[type_du_véhicule.options.length] = new Option(x, x);
+      }
+      type_du_véhicule.onchange = function () {
+        //empty bvs- and Carburants- dropdowns
+        boite_à_vitessel.length = 1;
+        carburant.length = 1;
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          carburant.options[carburant.options.length] = new Option(y, y);
+        }
+      }
+      carburant.onchange = function () {
+        //empty bvs dropdown
+        boite_à_vitessel.length = 1;
+        //display correct values
+        var z = subjectObject[type_du_véhicule.value][this.value];
+        for (var i = 0; i < z.length; i++) {
+          boite_à_vitessel.options[boite_à_vitessel.options.length] = new Option(z[i], z[i]);
+        }
+      }
+    }
+    function Calcule() {
+      var total = 0;
+      var nbrjour = document.getElementById("nbrjours").value;
+      var typevehicule = document.getElementById("tv").value;
+      var carburant = document.getElementById("Carburant").value;
+      var bv = document.getElementById("bv").value;
+      switch (typevehicule) {
+        case "Motos":
+          {
+            if (carburant == "Essence") {
+              total = nbrjour * 1.14 * 10;
+              break;
+            }
+            else if (carburant == "Electrique") {
+              total = nbrjour * 1.05 * 10;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+        case "Citadine":
+          {
+            if (carburant == "Electrique") {
+              total = nbrjour * 1.05 * 12;
+              break;
+            }
+            else if (carburant == "hybride") {
+              total = nbrjour * 1.09 * 12;
+              break;
+            }
+            else if (carburant == "Essence") {
+              total = nbrjour * 1.14 * 12;
+              break;
+            }
+            else if (carburant == "Diesel") {
+              total = nbrjour * 1.21 * 12;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+
+        case "Compact":
+          {
+
+            if (carburant == "hybride") {
+              total = nbrjour * 1.09 * 14;
+              break;
+            }
+            else if (carburant == "Essence") {
+              total = nbrjour * 1.14 * 14;
+              break;
+            }
+            else if (carburant == "Diesel") {
+              total = nbrjour * 1.21 * 14;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+
+        case "Berline":
+          {
+
+            if (carburant == "hybride") {
+              total = nbrjour * 1.28 * 20;
+              break;
+            }
+            else if (carburant == "Essence") {
+              total = nbrjour * 1.33 * 20;
+              break;
+            }
+            else if (carburant == "Diesel") {
+              total = nbrjour * 1.4 * 20;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+        case "Utilitaire":
+          {
+
+            if (carburant == "Diesel") {
+              total = nbrjour * 1.21 * 16;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+        case "Engin de Chantier":
+          {
+
+            if (carburant == "Essence") {
+              total = nbrjour * 1.14 * 900;
+              break;
+            }
+            else if (carburant == "Diesel") {
+              total = nbrjour * 1.21 * 900;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+        case "Camion":
+          {
+
+            if (carburant == "Diesel") {
+              total = nbrjour * 1.21 * 250;
+              break;
+            }
+            else {
+              document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+              break;
+            }
+          }
+        default: document.getElementById("Erreur").innerHTML = "Erreur de saisie essayer une aytre fois"; document.getElementById("res").innerHTML = "";
+      }
+
+      if (total > 0) {
+        document.getElementById("Erreur").innerHTML = "";
+        document.getElementById("res").innerHTML = "Reservation passe avec succes !! le total :" + (Math.round(total * 100) / 100) + "$";
+      }
+    }
+  </script>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $('.menu-toggle').click(function () {
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+      })
+    })
+  </script>
+  <script src="https://kit.fontawesome.com/756f1fbb0c.js" crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
